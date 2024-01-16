@@ -8,9 +8,15 @@ import java.util.UUID;
 
 @Getter
 @Setter
-@ToString
+//@ToString
 public class ChatInputMessage {
-    private UUID fromUserId;
+
+    private String fromUserId;
     private String text;
+
+    @Override
+    public String toString() {
+        return "ChatInputMessage(fromUserId=" + this.fromUserId + ", text=" + this.text + ")";
+    }
 }
 
